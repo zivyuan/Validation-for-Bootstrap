@@ -20,7 +20,6 @@
 !function($) {
 	$.fn.validation = function(options) {
 		return this.each(function() {
-			// globalOptions = $.extend({}, $.fn.validation.defaults, options);
 			$(this).data('_vopt', $.extend({}, $.fn.validation.defaults, options));
 			validationForm( $(this) );
 		});
@@ -92,7 +91,6 @@
 				flag = flag.substr(1, flag.length - 1);
 			}
 			var conf = flag.replace(/^[\w\-]+/i, '');
-			// var rules = globalOptions.validRules;
 			flag = flag.replace(/^([\w\-]+).*/i, '$1');
 			for (j = 0; j < rules.length; j++) {
 				var rule = rules[j];
